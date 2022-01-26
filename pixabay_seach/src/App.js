@@ -1,14 +1,14 @@
 import React,{ useState } from "react";
 import axios from 'axios';
 import SearchBar from "./components/SearchBar";
-import ImageList from "./components/ImageList";
+import GetLs from "./components/GetLs";
 
 const App = () => {
     const [images, setimages] =useState([]);
     const onSearchSubmit =async (term) =>{
         try {
             const params={
-                key: "25051452-22dcb24d68c2ea224c7404fdf",
+                key: '25051452-22dcb24d68c2ea224c7404fdf',
                 q  : term,
             };
             const response= await axios.get('https://pixabay.com/api/',{ params });
@@ -23,7 +23,7 @@ const App = () => {
     return (
         <div className="ui container" style={{marginTop: "20px"}}>
             <SearchBar onSubmit={onSearchSubmit} />
-            <ImageList images={images} />
+            <GetLs images={images} />
         </div>
     );
 };

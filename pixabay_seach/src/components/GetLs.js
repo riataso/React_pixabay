@@ -1,6 +1,6 @@
 import React from "react";
 
-const ImageList = (props) => {
+const GetLs = (props) => {
     const images=props.images.map((image)=>{
         return(
             <a href={image.pageURL} key={image.id} target='_blank' rel='noopener noreferrer' className='ui medium image' >
@@ -11,4 +11,4 @@ const ImageList = (props) => {
     return <div>{images}</div>
 };
 
-export default ImageList;
+export default GetLs;

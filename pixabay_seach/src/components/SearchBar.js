@@ -9,7 +9,7 @@ const SearchBar=({onSubmit})=>{
     return(
       <form onSubmit={onFormSabmit} className="ui form">
         <div className="field">
-          <label>ImageSearch</label>
+          <label>SearchPicture</label>
           <input type="text" name="Search" placeholder="" value={term} onChange={(event)=>{
               setTerm(event.target.value);//検索欄に入力された文字列
           }}
